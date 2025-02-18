@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        .form-main {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background-color: #ffd700;
+        }
+
+        .required::after {
+            content: '*';
+            color: red;
+            margin-left: 2px;
+        }
+
+        .password-input {
+            position: relative;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #666;
+        }
+
+        .google-btn {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            color: #333;
+            padding: 0.5rem;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .forgot-password {
+            color: #ffa500;
+            text-decoration: none;
+            float: right;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .signup-link a {
+            color: #0d6efd;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="menu-links">
+                        <a href="#">Track Order</a>
+                        <a href="#">Support</a>
+                        <a href="#">Sell on E-Bazaar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <div class="logo-container">
+                        <a href="#">
+                            <img src="https://www.e-bazaaronline.com/assets/icons/e-bazaar-logo-white.png"
+                                alt="E-Bazaar Logo" class="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="search-bar d-flex">
+                        <input type="text" placeholder="Search Product..." class="search-input flex-grow-1">
+                        <select class="categories-dropdown d-none d-md-block">
+                            <option>All Categories</option>
+                        </select>
+                        <button class="search-button">Search</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="nav-icons">
+                        <a href="#"><i class="far fa-heart"></i></a>
+                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="./login.html"><i class="far fa-user"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-main">
+        <div class="login-container">
+            <h2 class="title">Log In</h2>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label required">Email Address</label>
+                    <input type="email" class="form-control" placeholder="example@gmail.com">
+                </div>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <label class="form-label required">Password</label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <div class="password-input">
+                        <input type="password" class="form-control" placeholder="••••••">
+                        <span class="password-toggle">👁️</span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="remember">
+                        <label class="form-check-label" for="remember">
+                            Remember Me
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-dark w-100">Log In</button>
+
+                <button type="button" class="google-btn btn">
+                    <img src="/api/placeholder/20/20" alt="Google" class="me-2" style="width: 20px">
+                    Sign in with Google
+                </button>
+
+                <div class="signup-link">
+                    Don't have an account? <a href="./signup.html">Sign up free</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="newsletter-banner">
+
+        <div class="newsletter-content">
+            <div class="newsletter-text">
+                <h2 class="newsletter-title">Get Exclusive Discounts</h2>
+                <p class="newsletter-subtitle">on subscribing our new deals</p>
+
+                <form class="newsletter-form">
+                    <div class="input-wrapper">
+                        <i class="far fa-envelope email-icon"></i>
+                        <input type="email" placeholder="EMAIL ADDRESS" class="form-control input-with-icon">
+                    </div>
+                    <button type="submit" class="subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 mb-4 mb-md-0">
+                        <img src="https://www.e-bazaaronline.com/assets/icons/e-bazaar-logo-white.png"
+                            alt="E-Bazaar Logo" class="footer-logo">
+                        <p class="footer-description">
+                            Creating an inclusive online marketplace for diverse shoppers in Islamabad and beyond.
+                            Empowering local businesses and artisans through a digital platform to showcase products and
+                            thrive in the e-commerce landscape.
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 mb-4 mb-md-0">
+                        <h4 class="footer-heading">About</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Terms & Condition</a></li>
+                            <li><a href="#">Our Blogs</a></li>
+                            <li><a href="#">Privacy & Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 mb-4 mb-md-0">
+                        <h4 class="footer-heading">Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Payment Methods</a></li>
+                            <li><a href="#">Money Refund</a></li>
+                            <li><a href="#">Return Policy</a></li>
+                            <li><a href="#">Shipping Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4 class="footer-heading">Contact Us</h4>
+                        <div class="contact-info">
+                            Floor 15, State Life Tower Jinnah Avenue, Blue Area Islamabad, Pakistan.
+                        </div>
+                        <div class="contact-info">
+                            Tel: 0512308311
+                        </div>
+                        <div class="contact-info">
+                            Mobile: 03325555880
+                        </div>
+                        <div class="contact-info">
+                            Email: Info@e-bazaaronline.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <span class="copyright ms-3">© 2024 Copyright: All rights reserved</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                        <div class="payment-methods">
+                            <img src="https://via.placeholder.com/40x24?text=Visa" alt="Visa">
+                            <img src="https://via.placeholder.com/40x24?text=Mastercard" alt="Mastercard">
+                            <img src="https://via.placeholder.com/40x24?text=EasyPaisa" alt="EasyPaisa">
+                            <img src="https://via.placeholder.com/40x24?text=JazzCash" alt="JazzCash">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
